@@ -1,10 +1,18 @@
 {
-  "name": "src",
+  "name": "pet-store",
   "version": "1.0.0",
   "description": "",
   "main": "src/App.js",
+  "targets": {
+    "main": false
+  },
+  "default": "dist/index.html",
+  "homepage": "https://darshan-tw.github.io/pet-store",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.6.1",
     "prettier": "^2.7.1",
     "process": "^0.11.10"
