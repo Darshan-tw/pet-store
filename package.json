@@ -10,7 +10,7 @@
   "homepage": "https://darshan-tw.github.io/pet-store",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
